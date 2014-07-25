@@ -1,0 +1,246 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'myChart' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawmyChart()
+    });
+    function drawmyChart(){  
+      var opts = {
+ "dom": "myChart",
+"width":    800,
+"height":    400,
+"x": "Period",
+"y": "Count",
+"group": "Rating",
+"type": "multiBarChart",
+"id": "myChart" 
+},
+        data = [
+ {
+ "Category": "Action & Adventure",
+"Period": "1911-1950",
+"Rating": "Not so much !!",
+"User_Rating":              0,
+"User_Votes": 0,
+"sq":              0,
+"Count": 2 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1911-1950",
+"Rating": "Popular",
+"User_Rating":              0,
+"User_Votes": 0,
+"sq":              0,
+"Count": 0 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1951-1960",
+"Rating": "Not so much !!",
+"User_Rating":           85.8,
+"User_Votes": 151,
+"sq":    2.686466321,
+"Count": 14 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1951-1960",
+"Rating": "Popular",
+"User_Rating":            143,
+"User_Votes": 3459,
+"sq":    85.20372492,
+"Count": 18 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1961-1970",
+"Rating": "Not so much !!",
+"User_Rating":           60.8,
+"User_Votes": 125,
+"sq":    1.628779002,
+"Count": 9 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1961-1970",
+"Rating": "Popular",
+"User_Rating":          176.9,
+"User_Votes": 10933,
+"sq":  180.353878615,
+"Count": 22 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1971-1980",
+"Rating": "Not so much !!",
+"User_Rating":           63.8,
+"User_Votes": 119,
+"sq":    1.188117135,
+"Count": 11 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1971-1980",
+"Rating": "Popular",
+"User_Rating":          195.8,
+"User_Votes": 8053,
+"sq":  111.005199599,
+"Count": 25 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1981-1990",
+"Rating": "Not so much !!",
+"User_Rating":          104.1,
+"User_Votes": 540,
+"sq":    2.203423354,
+"Count": 17 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1981-1990",
+"Rating": "Popular",
+"User_Rating":          272.7,
+"User_Votes": 23949,
+"sq":     120.297146,
+"Count": 34 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1991-2000",
+"Rating": "Not so much !!",
+"User_Rating":            460,
+"User_Votes": 7781,
+"sq":    7.826197643,
+"Count": 64 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "1991-2000",
+"Rating": "Popular",
+"User_Rating":          292.4,
+"User_Votes": 97480,
+"sq":   107.68280249,
+"Count": 34 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":         1419.1,
+"User_Votes": 37161,
+"sq":   13.632439843,
+"Count": 192 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":          373.7,
+"User_Votes": 234395,
+"sq":   93.766528033,
+"Count": 44 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "2011-2014",
+"Rating": "Not so much !!",
+"User_Rating":          140.6,
+"User_Votes": 513,
+"sq":    2.006255907,
+"Count": 24 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "2011-2014",
+"Rating": "Popular",
+"User_Rating":          203.4,
+"User_Votes": 34809,
+"sq":  179.959689489,
+"Count": 25 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        chart
+  .color([ "blue", "green" ])
+  .reduceXTicks(false)
+  .stacked(true)
+  .margin({
+ "left":     75 
+})
+          
+        chart.xAxis
+  .axisLabel("Time Period")
+
+        
+        
+        chart.yAxis
+  .axisLabel("Number  of  TV  Shows")
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+    <script></script>    
+  </body>
+</html>

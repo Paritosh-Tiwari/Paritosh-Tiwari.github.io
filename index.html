@@ -1,1 +1,211 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Idiot Box Trends</title>
+  <meta charset="utf-8">
+  <meta name="description" content="The Idiot Box Trends">
+  <meta name="author" content="Paritosh Tiwari">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/nvd3/css/nv.d3.css"></link>
+<link rel=stylesheet href="libraries/widgets/nvd3/css/rNVD3.css"></link>
+<link rel=stylesheet href="./assets/css/default.css"></link>
+<link rel=stylesheet href="./assets/css/fonts.css"></link>
+<link rel=stylesheet href="./assets/css/phone.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/slidify.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  <script src="libraries/widgets/nvd3/js/jquery-1.8.2.min.js"></script>
+<script src="libraries/widgets/nvd3/js/d3.v3.min.js"></script>
+<script src="libraries/widgets/nvd3/js/nv.d3.min-new.js"></script>
+<script src="libraries/widgets/nvd3/js/fisheye.js"></script>
+
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/TV_Image_4.jpg">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>The Idiot Box Trends</h1>
+    <h2>Explore TV Shows trends across time and categories- then choose your favorites</h2>
+    <p>Paritosh Tiwari<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What&#39;s in it for me ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+</style>
+
+<p>You might find this app useful, if:</p>
+
+<ul>
+<li>You want to create the next big series in the history of television but are not sure which genre to step into. Fret not. Have a look at how different categories of TV Shows have fared with time and choose either the hottest one or the one with least competition.</li>
+<li>You are a social thinker, philosopher or just looking to gain an insight in the psyche of society. Explore the top genre&#39;s viewed by the public within each decade and ponder over the general state of society&#39;s mind.
+<div style='text-align: left;'>
+<img src="assets/img/image1.jpg">
+</div></li>
+<li>You just enjoy watching TV. You have seen all <em>(or most)</em> of the current best and want to know which shows were great before your time. Maybe you are just feeling nostalgic and want to remember the best television of the 80&#39;s/90&#39;s. Just select a category and a time period and have the list of top shows ready for you to enjoy. You can also directly go to the relevant TV show page by cliking on the hyperlink present in the results.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>So, How does it work ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+</style>
+
+<p>Check the App here: <a href="http://patiwari.shinyapps.io/TV_Shiny_App">http://patiwari.shinyapps.io/TV_Shiny_App</a></p>
+
+<p>You select whether to summarize by Category or Time Period. The chart below displays the trend for a sample category <em>(Action and Adventure)</em> across time. You can choose other categories in the actual application. <em>Hover the mouse over the graph to see the actual numbers.</em>
+<iframe src=' assets/fig/nvd3plot.html ' scrolling='no' frameBorder='0' seamless class='rChart nvd3 ' id=iframe- myChart ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Trends can be summarized as per Time Periods also</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+</style>
+
+<p>The chart below displays the top categories for a sample time period <em>(2001-2010)</em>. You can choose other time-periods in the actual application.</p>
+
+<p><iframe src=' assets/fig/nvd3plot_2.html ' scrolling='no' frameBorder='0' seamless class='rChart nvd3 ' id=iframe- myChart_2 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2><strong>Forget trends !!! I just want to watch good TV</strong></h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+</style>
+
+<p>Choose the <strong>Both</strong> option. Then choose a category and a time-period. You will get the list of Top 20 shows for the selected parameters. Do give some time for the image to load as it is sourced in real time from the show webpage.</p>
+
+<h4><strong>Appendix</strong></h4>
+
+<ul>
+<li><em>Data Source</em>: <a href="http://www.tv.com/shows/">www.tv.com/shows/</a></li>
+<li>Code for scraping data from website and further cleanup can be found here: <a href="https://github.com/Paritosh-Tiwari/TV_Trends_App_Shiny/tree/master/Data%20Scraping%20and%20Cleanup">https://github.com/Paritosh-Tiwari/TV_Trends_App_Shiny/tree/master/Data%20Scraping%20and%20Cleanup</a></li>
+<li>Popular category was decided on the basis of calculated quantity &#39;Success Quotient&#39;</li>
+<li><em>Success Quotient</em> = (Votes for a show/Votes for all shows across same time period)*User Rating*100. Shows with success quotient in the top 80 percentile were considered Popular</li>
+</ul>
+
+<h4><strong>Disclaimers</strong></h4>
+
+<ul>
+<li>The data is not exhaustive and is collected only from one source</li>
+<li>Any show with missing information was removed to have a clean data set</li>
+<li>Popularity is dependent on the voting and rating by users on the said website. It does not reflect on the actual commercial success of the show.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What&#39;s in it for me ?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='So, How does it work ?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Trends can be summarized as per Time Periods also'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='<strong>Forget trends !!! I just want to watch good TV</strong>'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

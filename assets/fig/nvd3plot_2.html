@@ -1,0 +1,301 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'myChart_2' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawmyChart_2()
+    });
+    function drawmyChart_2(){  
+      var opts = {
+ "dom": "myChart_2",
+"width":    800,
+"height":    400,
+"x": "Category",
+"y": "Count",
+"group": "Rating",
+"type": "multiBarChart",
+"id": "myChart_2" 
+},
+        data = [
+ {
+ "Category": "Action & Adventure",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":         1419.1,
+"User_Votes":          37161,
+"sq":   13.632439843,
+"Count":            192 
+},
+{
+ "Category": "Action & Adventure",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":          373.7,
+"User_Votes":         234395,
+"sq":   93.766528033,
+"Count":             44 
+},
+{
+ "Category": "Animation",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":         2249.6,
+"User_Votes":          46705,
+"sq":   16.703849374,
+"Count":            318 
+},
+{
+ "Category": "Animation",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":            277,
+"User_Votes":         102931,
+"sq":   40.494776927,
+"Count":             33 
+},
+{
+ "Category": "Comedy",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":         2889.7,
+"User_Votes":          71664,
+"sq":   25.223050412,
+"Count":            427 
+},
+{
+ "Category": "Comedy",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":          496.9,
+"User_Votes":         223849,
+"sq":   88.659696794,
+"Count":             59 
+},
+{
+ "Category": "Drama",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":         3039.2,
+"User_Votes":          60331,
+"sq":   21.878784245,
+"Count":            444 
+},
+{
+ "Category": "Drama",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":          846.6,
+"User_Votes":         557393,
+"sq":  222.242599248,
+"Count":             99 
+},
+{
+ "Category": "Fantasy",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":          697.9,
+"User_Votes":          18289,
+"sq":    6.717352489,
+"Count":             97 
+},
+{
+ "Category": "Fantasy",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":          195.8,
+"User_Votes":         129615,
+"sq":    52.30845161,
+"Count":             23 
+},
+{
+ "Category": "Game Show",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":         2519.8,
+"User_Votes":          28833,
+"sq":    9.925926293,
+"Count":            415 
+},
+{
+ "Category": "Game Show",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":           74.4,
+"User_Votes":          22036,
+"sq":    8.284124062,
+"Count":              9 
+},
+{
+ "Category": "Horror",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":          130.1,
+"User_Votes":           3683,
+"sq":    1.349846102,
+"Count":             18 
+},
+{
+ "Category": "Horror",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":           42.4,
+"User_Votes":          42536,
+"sq":   17.219234176,
+"Count":              5 
+},
+{
+ "Category": "Kids",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":          967.8,
+"User_Votes":          28865,
+"sq":    9.941694443,
+"Count":            163 
+},
+{
+ "Category": "Kids",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":          173.8,
+"User_Votes":          44417,
+"sq":   16.933156876,
+"Count":             21 
+},
+{
+ "Category": "Reality",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":         3059.3,
+"User_Votes":          37181,
+"sq":   12.670475607,
+"Count":            497 
+},
+{
+ "Category": "Reality",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":           98.2,
+"User_Votes":          22111,
+"sq":    8.285732774,
+"Count":             12 
+},
+{
+ "Category": "Science Fiction",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":          439.1,
+"User_Votes":           8606,
+"sq":    3.236209055,
+"Count":             58 
+},
+{
+ "Category": "Science Fiction",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":          231.5,
+"User_Votes":         185411,
+"sq":   74.593173596,
+"Count":             27 
+},
+{
+ "Category": "Suspense",
+"Period": "2001-2010",
+"Rating": "Not so much !!",
+"User_Rating":            589,
+"User_Votes":          15268,
+"sq":    5.578183858,
+"Count":             81 
+},
+{
+ "Category": "Suspense",
+"Period": "2001-2010",
+"Rating": "Popular",
+"User_Rating":          282.6,
+"User_Votes":         180578,
+"sq":   71.853167893,
+"Count":             33 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        chart
+  .color([ "blue", "green" ])
+  .reduceXTicks(false)
+  .stacked(true)
+  .margin({
+ "left":    100 
+})
+          
+        chart.xAxis
+  .rotateLabels(   -15)
+  .axisLabel("Top  10  Categories")
+
+        
+        
+        chart.yAxis
+  .axisLabel("Number  of  TV  Shows")
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+    <script></script>    
+  </body>
+</html>
